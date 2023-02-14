@@ -9,7 +9,7 @@ namespace WebApi
 {
     public class ManejadorProductoVendido
     {
-        public static string cadenaConexion = "Data Source=DESKTOP-7QBII56\\SQLEXPRESS;Initial Catalog=SistemaGestion;Integrated Security=True";
+        public static string cadenaConexion = "Data Source=QT5\\SQLEXPRESS;Initial Catalog=SistemaGestion;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         // OBTENER LISTA PRODUCTO VENDIDOS
         public static List<Producto> ObtenerProductosVendidos(long idUsuario)
