@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 
-namespace ProyectoFinalWebAPI
+namespace WebApi
 {
     public static class GetId
     {
