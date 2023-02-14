@@ -10,7 +10,7 @@ namespace WebApi
     {
         private long id;
         private int stock;
-        private long idProducto;
+        private long idProducto; 
         private long idVenta;
 
         public long Id { get => id; set => id = value; }
