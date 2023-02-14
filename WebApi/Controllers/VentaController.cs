@@ -7,5 +7,10 @@ namespace WebApi.Controllers
     [ApiController]
     public class VentaController : ControllerBase
     {
+        [HttpPost("{idusuario}")]
+        public void CrearVenta(List<Producto> productos, long idUsuario)
+        {
+            ManejadorVentas.InsertarVenta(productos, idUsuario);
+        }
     }
 }

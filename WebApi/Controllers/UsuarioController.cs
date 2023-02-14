@@ -7,5 +7,10 @@ namespace WebApi.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+        [HttpPut]
+        public void Actualizar([FromBody] Usuario usuario)
+        {
+            ManejadorUsuario.UpdateUsuario(usuario);
+        }
     }
 }
