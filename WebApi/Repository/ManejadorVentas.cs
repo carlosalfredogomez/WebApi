@@ -70,7 +70,7 @@ namespace WebApi
 
             using (SqlConnection conexion = new SqlConnection(cadenaConexion))
             {
-                SqlCommand comando = new SqlCommand("INSERT INTO Venta (Comentarios, IdUsuario) " + 
+                SqlCommand comando = new SqlCommand("INSERT INTO Venta (Comentarios, IdUsuario) " +
                     " VALUES (Comentarios = @comentarios, IdUsuario = @idUsuario", conexion);
                 comando.Parameters.AddWithValue("@comentarios", venta.Comentarios);
                 comando.Parameters.AddWithValue("@idUsuario", venta.IdUsuario);
@@ -85,8 +85,8 @@ namespace WebApi
                     comando2.Parameters.AddWithValue("@idProducto", producto.Id);
                     comando2.Parameters.AddWithValue("@idVenta", venta.Id);
                     comando2.ExecuteNonQuery();
-                    
-                    SqlCommand comando3 = new SqlCommand("UPDATE Producto SET Stock = (Stock - @stock) " + 
+
+                    SqlCommand comando3 = new SqlCommand("UPDATE Producto SET Stock = (Stock - @stock) " +
                         " WHERE Id = @idProducto", conexion);
                     comando3.Parameters.AddWithValue("@stock", producto.Stock);
                     comando3.Parameters.AddWithValue("@idProducto", producto.Id);
